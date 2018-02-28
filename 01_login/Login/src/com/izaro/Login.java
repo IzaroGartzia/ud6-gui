@@ -49,7 +49,14 @@ public class Login {
                     // ERROR
                     JOptionPane.showMessageDialog(login, "Usuario o contraseña incorrecto.", "ERROR", JOptionPane.ERROR_MESSAGE);
                 }
-                
+
+                // Para que salga como si el usuario no hubiera escrito ni el nombre ni la contraseña
+                usuario.setText("");
+                password.setText("");
+
+                // Para que salga el curso en el campo de usuario
+                usuario.requestFocus();
+
             }
         });
 
